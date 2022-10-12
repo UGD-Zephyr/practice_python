@@ -3,6 +3,8 @@
 # last changed: 2022-09-24
 # Type of program: Practicing character input in python.
 
+import datetime
+
 def hundredYearBirthday(name, age, currentYear, ageToHundred, hundredYear):
     """
     This function prints out
@@ -20,7 +22,8 @@ pass
 
 name            = input("name:")
 age             = int(input("age:"))
-currentYear     = 2022
+today           = datetime.date.today()
+currentYear     = today.year
 ageToHundred    = 100 - age 
 hundredYear     = ageToHundred + currentYear 
 loopCounter1    = int(0)
@@ -30,7 +33,6 @@ if yearlyBirthday == "n" or yearlyBirthday == "N" or yearlyBirthday == "no" or y
     hundredYear = (hundredYear - 1)
 
 hundredYearBirthday(name, age, currentYear, ageToHundred, hundredYear)
-
 amountOfCopies = int(input("amount of copies:"))
 
 while (amountOfCopies > 0):
